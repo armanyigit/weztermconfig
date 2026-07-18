@@ -41,15 +41,10 @@ end
 return {
   -- Font
   font = wezterm.font('JetBrains Mono', { weight = 'Regular' }),
-  font_size = 14.0,
+  font_size = 15.0,
 
   -- Colors
   color_scheme = 'Tokyo Night',
-  colors = {
-    split = '#565f89',
-  },
-  window_background_opacity = 0.97,
-  macos_window_background_blur = 10,
 
   -- Window
   window_decorations = 'RESIZE',
@@ -73,5 +68,6 @@ return {
     { key = '|', mods = 'CTRL|SHIFT', action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }) },
     { key = 's', mods = 'CTRL|SHIFT', action = act.SplitVertical({ domain = 'CurrentPaneDomain' }) },
     { key = 'w', mods = 'CTRL|SHIFT', action = act.CloseCurrentPane({ confirm = false }) },
+    { key = 'Space', mods = 'CTRL|SHIFT', action = act.QuickSelect },
   },
 }
